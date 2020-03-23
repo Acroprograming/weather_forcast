@@ -11,7 +11,12 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-
+	<script>
+		$(document).ready(function(){
+		    $("#test_data").load("{{ url_for('test_data') }}");
+		});
+		
+	</script>
 </head>
 <body>
 	<!--navigation bar-->
@@ -91,12 +96,10 @@
 		</div>
 	</div>
 </div>
-	<!--<div class="row">
-		<div class="col-md-7">
-		<center>
-			<img src="{{ url_for('static', filename='images/images (4).jfif') }}0.jpgc2.jfif" class="img-responsive" height="300px" width="600px" id="im"/>
-		</center>
-		</div>
+<!-- New Jumbotron added -->
+<div class="jumbotron" style="overflow: scroll;height: 500px;" id="test_data"></div>
+<div class="jumbotron" id="result"></div>
+	<!--
 		<div class="col-md-5">
 			<div class="panel-group" id="p">
 				<div class="panel panel-primary">
@@ -133,7 +136,8 @@
 			</div>
 		
 		</div>
-	</div>-->
+	</div>
+-->
 <div class="row">
 	<div class="col-md-4">
 	<div class="panel panel-success">
