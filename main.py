@@ -31,7 +31,7 @@ def result():
 
 @app.route("/columns",endpoint="columns")
 def columns():
-	cols=['Precip Type', 'Apparent Temperature (C)', 'Humidity','Wind Speed (km/h)', 'Wind Bearing (degrees)', 'Visibility (km)','Loud Cover', 'Pressure (millibars)','Predict']
+	cols=['Apparent Temperature (C)', 'Humidity','Wind Speed (km/h)', 'Wind Bearing (degrees)', 'Visibility (km)','Loud Cover', 'Pressure (millibars)','Predict']
 	return render_template("columns.html",cols=cols)
 
 
