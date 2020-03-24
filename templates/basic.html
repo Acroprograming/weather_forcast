@@ -15,7 +15,9 @@
 		$(document).ready(function(){
 		    $("#test_data").load("{{ url_for('test_data') }}");
 		});
-		
+		$(document).ready(function(){
+		    $("#columns").load("{{ url_for('columns') }}");
+		});
 	</script>
 </head>
 <body>
@@ -97,7 +99,8 @@
 	</div>
 </div>
 <!-- New Jumbotron added -->
-<div class="jumbotron" style="overflow: scroll;height: 500px;" id="test_data"></div>
+<div id="columns"></div>
+<div class="jumbotron" style="overflow: scroll;height: 300px;" id="test_data"></div>
 <div class="jumbotron" id="result"></div>
 	<!--
 		<div class="col-md-5">

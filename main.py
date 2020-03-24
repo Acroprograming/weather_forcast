@@ -26,7 +26,14 @@ def result():
 	i=int(i)
 	df = pd.DataFrame([['a', 'b'], ['c', 'd']],index=[0,1],columns=['col 1', 'col 2'])
 	s=str(pd.DataFrame(df.iloc[i]).to_html())
-	return s
+	result_data=[{"actual":-2.288888889,"prediction":-3.3219804853,"diff":1.0330915963}]
+	return render_template("result.html",res=result_data)
+
+@app.route("/columns",endpoint="columns")
+def columns():
+	cols=['Precip Type', 'Apparent Temperature (C)', 'Humidity','Wind Speed (km/h)', 'Wind Bearing (degrees)', 'Visibility (km)','Loud Cover', 'Pressure (millibars)','Predict']
+	return render_template("columns.html",cols=cols)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

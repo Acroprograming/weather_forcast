@@ -20,7 +20,7 @@
 		
 	{% endfor %}
 
-	<td><button onclick="result_calc('{{ index }}')">Validate</button></td>
+	<td><button id="validate" onclick="result_calc('{{ index }}')">Validate</button></td>
 	</tr>
 
 {% endfor %}
@@ -28,8 +28,10 @@
 <script >
 	function result_calc(i){
 		//alert(index);
+			//$("#validate").parentsUntil("tr").addClass("bg-primary");
+			$(document).ready(function(){
 		    $("#result").load("{{ url_for('result') }}",{ 'index':i });
-
+		    });
 	}
 </script>
 </body>
